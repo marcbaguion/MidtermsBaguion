@@ -59,8 +59,9 @@ public class MainActivity extends AppCompatActivity {
                     RadioButton rbPremium = (RadioButton) findViewById(R.id.rbPremium);
                     RadioButton rbRegular = (RadioButton) findViewById(R.id.rbRegular);
                     RadioButton rbBasic = (RadioButton) findViewById(R.id.rbBasic);
+                    Spinner spPipe = (Spinner) findViewById(R.id.spPipe);
 
-                    TextView[] texts = {swnight, tvTitle, tvLblBill, tvLblHistory, tvLblPrev, tvLblNew, tvLblPipe, tvLblPackage, etPrev, etNew, etResult, rbBasic, rbPremium, rbRegular};
+                    TextView[] texts = {swnight, tvTitle, tvLblBill, tvLblHistory, tvLblPrev, tvLblNew, tvLblPipe, tvLblPackage, etPrev, etNew, etResult, rbBasic, rbPremium, rbRegular, spPipe};
                     boolean night = swnight.isChecked();
                     if (night) {
                         bgElement.setBackgroundColor(Color.BLACK);
