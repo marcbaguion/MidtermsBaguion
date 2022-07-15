@@ -41,7 +41,40 @@ public class MainActivity extends AppCompatActivity {
 
     // TODO Milestone A: Use Day-Night mode.
     private void nightModeListenerMethod() {
+            Switch swnight = (Switch) findViewById(R.id.swNight);
+            swnight.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ConstraintLayout bgElement = (ConstraintLayout) findViewById(R.id.clMain);
+                    TextView tvTitle = (TextView) findViewById(R.id.tvTitle);
+                    TextView tvLblBill = (TextView) findViewById(R.id.tvLblBill);
+                    TextView tvLblHistory = (TextView) findViewById(R.id.tvLblHistory);
+                    TextView tvLblPrev = (TextView) findViewById(R.id.tvLblPrev);
+                    TextView tvLblNew = (TextView) findViewById(R.id.tvLblNew);
+                    TextView tvLblPipe = (TextView) findViewById(R.id.tvLblPipe);
+                    TextView tvLblPackage = (TextView) findViewById(R.id.tvLblPackage);
+                    EditText etPrev = (EditText) findViewById(R.id.etPrev);
+                    EditText etNew = (EditText) findViewById(R.id.etNew);
+                    EditText etResult = (EditText) findViewById(R.id.etResult);
+                    RadioButton rbPremium = (RadioButton) findViewById(R.id.rbPremium);
+                    RadioButton rbRegular = (RadioButton) findViewById(R.id.rbRegular);
+                    RadioButton rbBasic = (RadioButton) findViewById(R.id.rbBasic);
 
+                    TextView[] texts = {swnight, tvTitle, tvLblBill, tvLblHistory, tvLblPrev, tvLblNew, tvLblPipe, tvLblPackage, etPrev, etNew, etResult, rbBasic, rbPremium, rbRegular};
+                    boolean night = swnight.isChecked();
+                    if (night) {
+                        bgElement.setBackgroundColor(Color.BLACK);
+                        for (TextView tv : texts){
+                            tv.setTextColor(Color.WHITE);
+                        }
+                    } else {
+                        bgElement.setBackgroundColor(Color.WHITE);
+                        for (TextView tv : texts){
+                            tv.setTextColor(Color.BLACK);
+                        }
+                    }
+                }
+            });
     }
 
     // TODO Milestone B: Show History.
