@@ -119,19 +119,28 @@
                 android:textSize="16sp" />
 
             <LinearLayout
+                android:id="@+id/rbPackage"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <RadioButton
-                    android:id="@+id/rbPremium"
+                <RadioGroup
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="33"
-                    android:text="Premium" />
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rbPremium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="33"
+                        android:text="Premium" />
+
+                </RadioGroup>
 
                 <RadioButton
                     android:id="@+id/rbRegular"
-                    android:layout_width="wrap_content"
+                    android:layout_width="91dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="33"
                     android:checked="true"
